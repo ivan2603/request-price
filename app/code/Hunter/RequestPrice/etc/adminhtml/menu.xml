@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Hunter_RequestPrice::request_price" title="Request Price" module="Hunter_RequestPrice" sortOrder="60" parent="Magento_Customer::customer" action="request/price" resource="Magento_Customer::customer"/>
+    </menu>
+</config>

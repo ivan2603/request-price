@@ -1,0 +1,24 @@
+<?php
+$productSku = $block->getSaleableItem()->getSku();
+?>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "price_request": {
+                    "component" : "Hunter_RequestPrice/js/request",
+                    "baseUrl"   : "<?= $block->getBaseUrl() ?>",
+                    "sku"       : "<?= $productSku ?>"
+                }
+            }
+        }
+    }
+}
+</script>
+<div class="price-info">
+    <button type="button" title="Request Price" class="action primary tocart" id="product-price-request-button">
+        <span><?php echo __('Request Price'); ?></span>
+    </button>
+</div>
+
